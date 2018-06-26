@@ -46,14 +46,14 @@ class Song
 
     def self.new_from_filename(file)
         song = self.new
-        name = file.split(/\ - |.mp3/).last
+        # song.name = file.split(/\ - |.mp3/).last
         # song.artist_name = file.split(/\ - |.mp3/).first
         song
     end
 
     def self.create_from_filename(file)
         song = self.create
-        # song.name = file.split(/\ - |.mp3/).last
+        song.name = file.to_s.split(/\ - |.mp3/).last
         # song.artist_name = file.split(/\ - |.mp3/).first
         song
     end
